@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ 
+  </head>
+ 
+  <body>
+    
+<h3>ENTROU NO VER ALL</h3>
+
+ {%  for usuario in usuarios %}
+ <p>ID: {{ usuario.id}}  <a href="{%  url 'seeds' usuario.id %}" >Editar</a></p>
+ 
+ <p>NOME: {{ usuario.name}}</p>
+ <p>EMAIL: {{ usuario.email}}</p>
+ <p>SENHA: {{ usuario.senha}}</p>
+ <br />
+{%  endfor %}
+
+
+
+  </body>
+</html>
